@@ -75,6 +75,9 @@ def about(request):
                 color: white;
                 font-size: 0.9em;
             }
+            p {
+            text-align: justify;
+        }
         </style>
     </head>
     <body>
