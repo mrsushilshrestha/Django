@@ -53,6 +53,9 @@ Troubleshooting Reminder:
 
 -----------------------Note--------------------------------------------------------------------------
 
+---by-pass-Windows-security---
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 ---create virtual-environment---
 pip install virtualenv
 python -m venv virtualenvironment
