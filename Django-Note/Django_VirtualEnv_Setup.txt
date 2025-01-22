@@ -76,3 +76,44 @@ django-admin startproject firstProject .
 python manage.py runserver
 
 
+-------------------------
+from django.http import HttpResponse
+
+---for render html file-----------
+from django.shortcuts import render 
+
+--add to template in setting.py------
+TEMPLATES = [
+    {
+        
+        'DIRS': ['templates'],
+
+    }
+]
+
+-----Django's static image link----
+
+Steps 1: to Make This Work:
+Enable Static Files: Ensure your settings.py file has STATIC_URL and STATICFILES_DIRS properly configured.
+
+import os
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+Steps 2:Store the Image in the Static Folder:
+ Place the image in a directory like static/image/image-1.png.
+
+Steps 3: Load Static in the Template: At the top of your HTML template, 
+
+{% load static %}
+
+Steps 4: Updated <img> Tag:
+
+<img src="{% static 'image/image-1.png' %}" alt="My Photo" />
