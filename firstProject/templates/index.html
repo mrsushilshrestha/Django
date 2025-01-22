@@ -1,114 +1,18 @@
 {% load static %}
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: rgb(234, 242, 237);
-        color: #333;
-        padding: 0 20px;
-      }
+    {%include 'link.html'%}
 
-      header {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-      }
-
-      header nav {
-        margin: 0 10px;
-        font-size: 1.2em;
-        cursor: pointer;
-      }
-
-      header nav:hover {
-        text-decoration: underline;
-      }
-
-      section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px 0;
-        padding: 20px;
-        {% comment %} background: linear-gradient(135deg,rgb(227, 63, 63),rgb(155, 139, 171),rgb(58, 163, 135)); {% endcomment %}
-        background: linear-gradient(135deg,rgb(76, 80, 216),rgb(155, 139, 171),rgb(189, 35, 97));
-
-
-
-
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-
-      .container {
-        text-align: center;
-        max-width: 800px;
-      }
-
-      .container img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 50%; /* Makes the image round */
-        margin-top: 20px;
-        width: 400px; /* Optional: Set a fixed width and height for consistency */
-        height: 400px; /* Match the width to maintain a perfect circle */
-        object-fit: cover; /* Ensures the image content fits nicely in the circle */
-      }
-
-      .container p {
-        margin: 20px 0;
-        font-size: 1.1em;
-      }
-
-      footer {
-        text-align: center;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        font-size: 0.9em;
-      }
-      p {
-        text-align: justify;
-      }
-    </style>
+    <title>Daraz</title>
   </head>
   <body>
-    <header>
-      <nav><a href="/about">About Me</a></nav>
-      <nav><a href="/contact">Contact</a></nav>
-    </header>
-
-    <section>
-      <div class="container">
-        <p>
-          My name is Sushil Shrestha, a passionate technology enthusiast and
-          Python developer from Nepal. I am currently pursuing a Bachelor's
-          degree in Information Technology at Himalayan WhiteHouse International
-          College. With a deep interest in coding and technology, I have honed
-          my skills in Python, ethical hacking, and various programming
-          concepts. My goal is to leverage my knowledge and skills to innovate
-          and solve real-world problems, particularly in the fields of software
-          development and cybersecurity. I actively engage in coding challenges,
-          projects, and collaborations to keep expanding my expertise.
-        </p>
-        <img src="{% static 'image/image-1.png' %}" alt="My Photo" />
-      </div>
-    </section>
-
-    <footer>&copy; 2025 Sushil Shrestha. All Rights Reserved.</footer>
+    {% include 'header.html' %} {%include 'template.html'%}
   </body>
+
+  {% include 'footer.html' %}
 </html>

@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/',about),
     path('contact/',contact),
-    path('daraz/', daraz)
+    path('daraz/',daraz)
     
     
 ]
