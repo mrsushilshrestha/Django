@@ -127,3 +127,6 @@ def about(request):
 def contact(request):
     
     return render(request,"contact.html")
+
+def daraz(request):
+    return render(request,"Daraz.html")
