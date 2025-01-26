@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags for responsive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Include external link files (CSS, JS, etc.) -->
+    {%include 'link.html'%}
+
+    <title>Daraz</title>
+  </head>
+  <body>
+    <!-- Include the header section -->
+    {% include 'header.html' %}
+
+    <!-- Main content -->
+    <!-- Include the carousel or main template file -->
+    {%include 'template.html'%}
+
+    <!-- Include the footer section -->
+    {% include 'footer.html' %}
+  </body>
+</html>

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+<<<<<<< HEAD
 from .view import about,contact
 
 urlpatterns = [
@@ -26,4 +27,15 @@ urlpatterns = [
 
     
 
+=======
+from .view import contact,about,daraz
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('about/',about),
+    path('contact/',contact),
+    path('daraz/',daraz)
+    
+    
+>>>>>>> refs/remotes/origin/main
 ]
