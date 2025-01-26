@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- Title Block -->
+{% block titles %}About{% endblock %}
+
+<!-- Head Block -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+<!-- Content Block -->
+{% block content %}
+<div class="container">
+  <h2>About Our Website</h2>
+  <p>
+    This is the about page for our website. Here, we talk about our mission,
+    vision, and story.
+  </p>
+  <img src="{% static 'images/about-image.jpg' %}" alt="About Us" />
+</div>
+{% endblock %}
