@@ -1,5 +1,12 @@
-{% extends 'base.html' %}{%load static%} {% block template %}
+{% extends 'base.html' %}{%load static%} 
+
+<!-- Custom CSS -->
+    {% block style %} <link rel="stylesheet" href="{% static 'css/index.css' %}" />{% endblock %}
+
+<!--title-->
+    {% block title %}Home{% endblock %}
 <!--carousel-->
+{% block template %}
 <div
   id="carouselExampleControlsNoTouching"
   class="carousel slide"
@@ -14,9 +21,7 @@
           class="d-block w-100 carousel-image"
           alt="first-image"
         />
-        <div class="carousel-overlay">
-          <h3 class="carousel-text">Shop the Best Deals Now!</h3>
-        </div>
+
       </div>
     </div>
     <div class="carousel-item">
@@ -77,8 +82,7 @@
         <div class="card-body">
           <h5 class="card-title">Fast Charging Cable</h5>
           <p class="card-text">
-            4 in 1 Fast Charging Cable (Type C/USB A/ Lightning) Dual Type C PD
-            27W 65W Multi Charging Cable.
+            Experience crystal-clear audio with our premium wireless earbuds.
           </p>
           <a href="#" class="btn btn-primary w-100">View Product</a>
         </div>
