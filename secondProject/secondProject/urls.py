@@ -21,11 +21,11 @@ from .view import login,product,index,signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',login),
-    path('signup/',signup),
-    path('',index),
-    path('index/',index),
-    path('product/',product),
+    path('login/',login,name="login"),
+    path('signup/',signup,name="signup"),
+    path('',index,name="index"),
+    
+    path('product/',product,name="product"),
     
     
     
