@@ -117,3 +117,11 @@ Steps 3: Load Static in the Template: At the top of your HTML template,
 Steps 4: Updated <img> Tag:
 
 <img src="{% static 'image/image-1.png' %}" alt="My Photo" />
+
+
+-----create-django-app------
+python manage.py startapp
+
+---know shortcuts to create app/project ----
+python manage.py
+
