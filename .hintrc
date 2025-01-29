@@ -3,6 +3,12 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off"
+      }
+    ]
   }
 }
