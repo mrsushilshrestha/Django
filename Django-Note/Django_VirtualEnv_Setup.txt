@@ -125,3 +125,38 @@ python manage.py startapp
 ---know shortcuts to create app/project ----
 python manage.py
 
+
+----------model-in-django--------------------
+
+from django.db import models
+
+# Create your models here.
+class Account(models.Model):
+    email = models.EmailField(max_length=100)
+    username = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    # Override the __str__ method to return a more useful string
+    def __str__(self):
+        return f"Account(id={self.id}, email={self.email}, username={self.username}, create_at ={self.create_at})"
+
+
+-----ORM--In---Django------------------------
+first of all
+python manage.py shell
+
+from app_name.models import class_name
+eg:
+from account.models import Account
+
+Account.objects.all() #to saw the all data in the Database
+Account.objects.first() # return the first data in the table
+Account.objects.last()  # return the last data in the table
+Account.objects.all.count() # return the total count of the data
+Account.objects.create(email="mrsushilshrestha@gmail.com",username="mrsushilshrestha",password="admin")
+Account.objects.last().delete() # delete the last data in the table
+Account.objects.get(id=1) #return data which id is 1
+Account.objects.filter(name="sushil") #just like search it also return data in the table which name is "sushil"
+Account.objects.exists() #it check data exists in the table not , basically it return TRUE or FALSE
