@@ -1,0 +1,13 @@
+{% extends 'accountFather.html' %}
+
+{% block content %} 
+    <h1>index</h1> 
+    <h3>total products</h3> 
+    {% for product in all_products %}
+    <div>
+        <span>Product name is:</span>
+        <li>{{ product.email }}</li>
+        <hr> 
+    </div>
+    {% endfor %}
+{% endblock %}

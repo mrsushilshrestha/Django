@@ -160,3 +160,10 @@ Account.objects.last().delete() # delete the last data in the table
 Account.objects.get(id=1) #return data which id is 1
 Account.objects.filter(name="sushil") #just like search it also return data in the table which name is "sushil"
 Account.objects.exists() #it check data exists in the table not , basically it return TRUE or FALSE
+
+
+
+#Product.objects.all().filter(price__gte=2000)
+#Product.objects.all().filter(price__lte=2000)
+#Product.objects.all().filter(name__icontent="apple")
+

@@ -27,5 +27,12 @@ urlpatterns = [
     path('product/',product,name="product"),
     
     
-    path('accounts/',include("account.urls"))
+    path('accounts/',include("account.urls")),
+    
+    path('index/',include("account.urls")),
+    path('login-user/',include("account.urls")),
+    path('signup/',include("account.urls")),
+    
+    
+    
 ]
